@@ -1,4 +1,4 @@
-package com.nelson.dao;
+ package com.nelson.dao;
 
 import java.sql.*;
 import java.sql.DriverManager;
@@ -26,8 +26,10 @@ public class DaoFactory {
 	}
 	
 	public Connection getConnection() throws SQLException{
-		return DriverManager.getConnection(url, user, password);
-	}
+		 Connection connexion = DriverManager.getConnection(url, user, password);
+	        connexion.setAutoCommit(false);
+	        return connexion; 
+	    }
 	
 	//Recuperer le DAO
 	

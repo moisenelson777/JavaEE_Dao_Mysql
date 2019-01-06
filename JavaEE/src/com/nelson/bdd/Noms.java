@@ -33,7 +33,7 @@ public class Noms {
                 String prenom = resultat.getString("prenom");
                 
                 Utilisateur utilisateur = new Utilisateur();
-                utilisateur.setNom(nom);
+            //    utilisateur.setNom(nom);
                 utilisateur.setPrenom(prenom);
                 
                 utilisateurs.add(utilisateur);
